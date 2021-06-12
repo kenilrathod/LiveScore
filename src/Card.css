@@ -1,0 +1,218 @@
+*{
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0;
+}
+::selection{
+    color:#001b44;
+    background-color:transparent
+}
+
+.main {
+    width:100%;
+    
+}
+.card-div {
+    background-image: url("./img/43434.jpg");
+    backdrop-filter: blur(5px);
+    background-size: 100% 100%;
+    margin:auto;
+    width:60%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    left:50%;
+    border:0;
+    box-sizing: content-box;
+    margin-bottom: 20px;
+    text-align:center;
+    /* background-color: #ffdfdf; */
+}
+
+.scorecard_matchstarted{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+.matchstarted {
+    text-align: right;
+    padding-right: 5px;    
+}
+.matchstarted button {
+    border:1px solid black;
+    margin-top:3px;
+    margin-right:10px ;
+    font-size: 16px;
+    font-weight: bold;
+    border:0;
+    background-color:transparent
+
+}
+
+.fullscorecard {
+    text-align: left;
+    padding-left: 5px;    
+}
+.fullscorecard button {
+    cursor: pointer;
+    border:1px solid black;
+    margin-top:3px;
+    margin-left:10px ;
+    font-size: 16px;
+    font-weight: bold;
+    color: tomato;
+    border:0;
+    background-color:transparent
+}
+.fullscorecard button:hover{
+    box-shadow: inset 0 0 10px rgba(65, 132, 234, 0.75)
+}
+.score {
+    margin-right:auto;
+    width:100%;
+    margin:5px;
+    font-weight: 500;
+}
+
+.team-details {
+    display:grid;
+    grid-template-columns:40% 20% 40%;
+    grid-template-rows:110px ;
+}
+.buttons {
+    display:grid;
+    grid-template-columns:auto auto;
+    align-content: center;
+    justify-content: center;
+    grid-template-rows: auto;
+    padding-bottom: 10px;
+}
+.details-Button {
+    margin-right: 20px;
+
+}
+.time-Button{
+    margin-left:20px;
+
+}
+.details-Button ,.time-Button {
+  color: white;
+  border: 2px solid #001b44;
+  padding: 5px 0 5px 0;
+  display: inline-block;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 12px;
+  letter-spacing: 1px;
+  background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+  cursor: pointer;
+  background-size: 300% 100%;
+  -webkit-transition: ease-out 0.8s;
+  -moz-transition: ease-out 0.8s;
+  transition:all ease-out 0.8s;
+}
+.slide_left:hover {
+    background-position: 100%  0;
+    box-shadow:0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  }
+
+  button:disabled{
+    color:black;
+    transition:none;
+    background-image: linear-gradient(to right, #ccc,white,gray);
+    background-size: 300% 100%;
+    transition: all 0.8s;
+    
+}
+button[disabled]:hover{
+    background-color: none;
+    cursor:not-allowed;
+    box-shadow: inset 2px 2px 0 rgba(0, 0, 0, 0.2);
+    background-position: 100% 0;
+
+}
+.team-1 {
+    font-weight: 700;
+    text-align:right;
+    line-height: 100px;
+    overflow:hidden;
+    text-overflow:"----";
+}
+/* new added score div*/
+.team-1 div{
+    position:absolute;
+    top:23px;
+    left:31%;
+    font-size:20px;
+    color: #2c3e50;
+    font-weight: bolder;
+}
+/*new added score div end*/
+/* new added score div*/
+.team-2 div{
+    position:absolute;
+    top:23px;
+    left:62%;
+    font-size:20px;
+    color:#2c3e50;
+    font-weight: bolder;
+}
+/*new added score div end*/
+.vs {
+    width:115px
+}
+.team-2 {
+    color:#001b44;
+    font-weight: 700;
+    text-align:left;
+    line-height: 100px;
+    overflow:hidden;
+    text-overflow:"----"; 
+}
+
+
+@media screen and (max-width:565px){
+    .team-details {
+        grid-template-columns:auto;
+        grid-template-rows: 80px 55px 80px;
+    }
+    .team-1 {
+        text-align:center;
+        padding-bottom: auto;
+    }
+    .team-2 {
+        text-align:center;
+        padding-top: auto;
+    }
+    .team-1 div {
+        left:41%;
+    }
+    .team-2 div {
+        top:160px;
+        left:41%
+    }
+    .vs {
+        width:85px
+    }
+    .details-Button {
+        margin-right: 5px;
+    
+    }
+    .time-Button{
+        margin-left:0px;
+    
+    }
+    .matchstarted {
+        height:auto
+    }
+}
+
+
+@media screen and (min-width:565px) and (max-width:860px){
+    .card-div{
+        width:96%;
+        font-weight: normal;
+    }
+    
+}
+
+.spin{
+    color:red
+}

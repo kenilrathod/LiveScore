@@ -1,0 +1,196 @@
+*{
+ box-sizing: border-box;   
+}
+.allteam {
+    width:100%;
+    display:-webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display:flex;
+    justify-content:space-evenly;
+    justify-content:-webkit-space-evenly;
+    justify-content: -moz-space-evenly;
+    justify-content: -ms-space-evenly;
+    justify-content: -o-space-evenly;
+    
+}
+.team1batting_bowling{
+    display:flex;
+    flex-direction: column;
+    width:30%;
+    height:auto;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+    background-image: url('./img/86373.jpg');
+    background-size: 100% 100vh;
+}
+table tr td{
+    border-bottom: 1px outset #343434;
+}
+.team1batting_bowling table tr:nth-child(even),.team2batting_bowling table tr:nth-child(even){
+    background:linear-gradient(to right,#ccc , white,#ccc);
+}
+.team1batting_bowling table tr td:not(:nth-child(1)){
+    text-align: center;
+}
+
+.team1batting_bowling table tbody tr td{
+    text-align:center
+}
+.team1batting_bowling table tbody tr th{
+    text-align:center}
+.team2batting_bowling{
+    display:flex;
+    flex-direction: column;
+    width:30%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+    background-image: url('./img/86373.jpg');
+    background-size: 100% 100vh;
+}
+.team2batting_bowling table tbody tr td{
+    text-align:center
+}
+.team2batting_bowling table tbody tr th{
+    text-align:center}
+
+.team2batting_bowling table tbody tr td:nth-child(1){
+        text-align:left
+}
+.team1batting_bowling table tbody tr td:nth-child(1){
+    text-align:left
+}
+
+.team1title,.team2title{
+    height:50px;
+    text-overflow: hidden;
+    overflow:hidden;
+    line-height: 50px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    color:white;
+    font-weight: bolder;
+    background-size: 300% 100%;
+    transition:all ease-out 0.4s;
+    padding-left:15px;
+    border-radius: 12px;
+}
+.team1title:hover,.team2title:hover{
+    background-position: 100%  0;
+    box-shadow:0 4px 15px 0 rgba(65, 132, 234, 0.75);
+    transform: scale(1.07);
+}
+
+@media screen and (max-width:1000px){
+    .team1batting_bowling,.team2batting_bowling{
+        width:40%
+    }
+}
+@media screen and (max-width:900px){
+    .team1batting_bowling,.team2batting_bowling{
+        width:45%
+    }
+}
+@media screen and (max-width:800px){
+    .team1batting_bowling,.team2batting_bowling{
+        width:48%
+    }
+}
+@media screen and (max-width:762px){
+    .allteam{
+        flex-direction: column;
+    }
+    .team1batting_bowling,.team2batting_bowling{
+        position: relative;
+        width:60%;
+        left:50%;
+        transform: translateX(-50%);
+        margin-bottom: 40px;
+        
+    }
+}
+@media screen and (max-width:624px){
+    .team1batting_bowling,.team2batting_bowling{
+        position: relative;
+        width:70%;
+        left:50%;
+        transform: translateX(-50%);
+        margin-bottom: 40px;  
+    }
+}
+@media screen and (max-width:505px){
+    .team1batting_bowling,.team2batting_bowling{
+        position: relative;
+        width:88%;
+        left:50%;
+        transform: translateX(-50%);
+        margin-bottom: 40px;  
+    }
+}
+@media screen and (max-width:415px){
+    .team1batting_bowling,.team2batting_bowling{
+        position: relative;
+        width:96%;
+        left:50%;
+        transform: translateX(-50%);
+        margin-bottom: 40px;  
+    }
+}
+.label{
+    margin:6px 3px 6px 32px;
+    font-weight:900
+}
+.mom{
+    margin-left:10px;
+    width:100%;
+    height:90px;
+}
+.momplayer{
+    font-weight: 800;
+    line-height:30px;
+    padding-left:30px;
+    margin-bottom: 30px;
+}
+.chevronicon{
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+    float:right;
+    margin-right: 30px;
+    color:black;
+    font-weight: 1000;
+}
+.maxzero{
+    max-height: 70px;
+    transition: all 0.2s linear;
+}
+.maxzero1{
+    max-height: 70px;
+    transition: all 0.2s linear;
+}
+.scorecard_not_found{
+    display:grid;
+    place-items: center;
+    font-weight: 700;
+}
+.backtohome{
+    position:relative;
+    left:50%;
+    transform:translate(-50%);
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    cursor:pointer;
+    color:white;
+    font-weight: bolder;
+    background-size: 300% 100%;
+    transition:all ease-out 0.9s;
+    padding:5px;
+    border-radius: 5px;
+    margin-top:20px;margin-bottom: 30px;
+}
+.backtohome:hover{
+    background-position: 100%  0;
+    box-shadow:0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}

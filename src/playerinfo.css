@@ -1,0 +1,225 @@
+.allinfo{
+       background-image: url("./img/86373.jpg");
+       background-size: 100vw 100vh;
+}
+.searchbar {
+    display:flex;
+    float:right;
+    margin-right:10px;
+}
+.players {
+    height:27px;
+    width:180px;
+    box-sizing:border-box;
+    text-decoration: capitalize;
+    padding-left: 25px;
+}
+.players::first-letter{
+    text-decoration: capitalize;
+}
+.searchplayer {
+    width:60px;
+    height:26px;
+    margin-left:3px;
+    color: white;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    cursor: pointer;
+    
+    background-size: 300% 100%;
+    transition:all 0.8s ease-in;
+}
+.searchplayer:hover {
+    background-position: 100%  0;
+    box-shadow:0 4px 15px 0 rgba(65, 132, 234, 0.75);
+
+}
+.playerimg {
+    margin-left:5px;
+    border-radius: 50%;
+    width:150px;
+    height:190px;
+    border-right: 5px inset #001b44;
+}
+.platerinfo{
+    margin-left:15px;
+    margin-top:10px;
+    width:95%;
+    font-size:22px;
+    height:130px;
+    overflow:auto;
+    padding:3px 9px;
+    border-right:7px inset #343434 ;
+    border-left:7px inset #343434 ;
+
+}
+.platerinfo::-webkit-scrollbar{
+    width:20px;
+}
+.platerinfo::-webkit-scrollbar-track{
+    border-radius: 10px;
+    background-color:white;
+    box-shadow:inset 0 0 6px rgba(0,0,0,0.4)
+    
+}
+.platerinfo::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background:linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow:inset 0 0 6px rgb(255, 255, 255,0.6)
+}
+
+.platerinfo::first-letter{
+    color:#3f86ed;
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+table,th, td{
+    border:0px solid black;
+    text-align: center;
+}
+
+th{
+    text-align:center;
+    padding:5px
+}
+.stats th:hover{
+    transform:scale(1.1)
+}
+.stats {
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-evenly;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.img_pinfo{
+    display:flex;
+    align-items:center;
+
+}
+.playerinfo_table {
+    border:0
+}
+.playerinfo_table th{
+    border:0;
+    text-align:right
+}
+.playerinfo_table td {
+    border:0;
+    text-align:left
+}
+
+.stats table tr:hover{
+    background-color:#ccc;
+}
+.bat_bow{
+    background-color:#001b44;
+    color:white
+}
+
+.playerNotfound{
+    text-transform: uppercase;
+    color:red;
+    width:100%;
+    height:100%;
+    text-align: center;
+    
+
+}
+.playerNotfound img {
+    position: absolute;
+    top:160px;
+    left:0;
+    width:65%;
+    height:65%;
+    animation: text 3s alternate-reverse infinite;
+}
+.playerNotfound h4 {
+    position:absolute;
+    top:50%;
+    left:50%;
+    font-size: 24px;
+    transform: translate(50%);
+    animation: text 2s alternate-reverse infinite;
+}
+@keyframes text {
+    0%{
+        transform:translateY(-10px) scale(1);
+    }
+    100%{
+        transform:translateY(20px) scale(0.9)
+    }
+}
+@keyframes rotate {
+    0%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(20px)
+    }
+}
+
+@media screen and (max-width:511px){
+    .stats{
+        font-size:11px
+    }
+}
+
+@media screen and (max-width:658px){
+    .img_pinfo{
+        display:grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        float:left;
+    }
+    .platerinfo{
+        margin-left:5px;
+        border-right:2px inset #343434 ;
+        border-left:2px inset #343434 ;
+        width:98%;
+        height:120px;
+    }
+
+    .stats {
+        display:grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+    .stats table {
+        margin-top: 10px;
+
+    }
+    tr {
+        width:100%
+    }
+}
+
+@media screen and (min-width:658px) and (max-width:1004px){
+    .stats {
+        display:grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+    .stats table {
+        margin-top: 10px;
+    }
+}
+.times{
+    position:relative;
+    padding-top:3px;
+    left:175px;
+    color:black;
+    cursor:pointer;
+    color:#343434;
+    transition:all ease-in-out 0.4s ;
+}
+.search{
+    position:relative;
+    padding-top:3px;
+    left:31px;
+    color:#343434;
+    transition:all ease-in-out 0.4s ;
+
+}
+.times:hover,.search:hover{
+    transform:scale(1.2);
+}
